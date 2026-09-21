@@ -1,0 +1,36 @@
+;
+; BIND data file for lab.local
+;
+
+$TTL 86400
+
+@   IN  SOA dns-srv-01.lab.local. admin.lab.local. (
+        2026092101 ; Serial
+        3600       ; Refresh
+        900        ; Retry
+        604800     ; Expire
+        86400      ; Negative Cache TTL
+)
+
+; Authoritative name server
+@           IN  NS      dns-srv-01.lab.local.
+
+; DNS Server
+dns-srv-01  IN  A       192.168.40.53
+
+; Infrastructure
+gateway     IN  A       192.168.40.1
+firewall    IN  A       192.168.10.1
+
+; Servers
+win-srv-01  IN  A       192.168.40.10
+linux-srv-01 IN A       192.168.40.20
+monitor-01  IN  A       192.168.40.30
+
+; Network services
+nas         IN  A       192.168.40.40
+git         IN  A       192.168.40.50
+
+; Aliases
+dns         IN  CNAME   dns-srv-01
+monitoring  IN  CNAME   monitor-01

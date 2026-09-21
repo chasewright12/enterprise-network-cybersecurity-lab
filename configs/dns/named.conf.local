@@ -1,0 +1,31 @@
+//
+// Local DNS zones
+//
+
+// Forward lookup zone
+zone "lab.local" {
+    type master;
+    file "/etc/bind/db.lab.local";
+
+    // Only internal DNS clients should query this zone.
+    allow-query {
+        192.168.10.0/24;
+        192.168.20.0/24;
+        192.168.30.0/24;
+        192.168.40.0/24;
+    };
+};
+
+
+// Reverse lookup zone
+zone "40.168.192.in-addr.arpa" {
+    type master;
+    file "/etc/bind/db.192.168.40";
+
+    allow-query {
+        192.168.10.0/24;
+        192.168.20.0/24;
+        192.168.30.0/24;
+        192.168.40.0/24;
+    };
+};

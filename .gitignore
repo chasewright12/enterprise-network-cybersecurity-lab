@@ -1,0 +1,122 @@
+## Secrets and Credentials
+.env
+.env.*
+!.env.example
+
+*.secret
+*.secrets
+secrets/
+credentials/
+passwords/
+private/
+vault/
+
+## API keys and tokens
+*.token
+*.apikey
+*.api-key
+
+## Private keys and Certificates
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.crt
+*.cer
+
+# Keep public/example certificates only if explicitly renamed
+# and verified to contain no private material.
+
+## Network Device Exports
+
+# Palo Alto
+*.xml
+*.xml.gz
+
+# Aruba / Network switch backups
+*.cfg
+*.conf.bak
+*.config.bak
+
+#MicroTik
+*.backup
+*.rsc.backup
+
+# Router/device exports
+exports/
+backups/
+config-backups/
+
+## Proxmox / Virtualization
+*.qcow2
+*.vmdk
+*.vdi
+*.ova
+*.ovf
+
+# VM snapshots / backups
+*.vma
+*.vma.zst
+*.tar.zst
+
+# Proxmox temporary/runtime files
+*.tmp
+*.lock
+
+## Logs
+
+*.log
+logs/
+log/
+*.pcap
+*.pcapng
+
+# Security Onion packet captures
+captures/
+pcaps/
+
+## Databases / App Data
+*.db
+*.sqlite
+*.sqlite3
+
+data/
+database/
+runtime/
+
+## Wazuh
+
+# Avoid commiting generated logs and local data
+wazuh-data/
+wazuh-logs/
+
+## Grafana
+grafana-data/
+grafana.db
+
+## OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+## Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+## Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+## Generated documentation
+*.pdf
+*.docx
+
+
+

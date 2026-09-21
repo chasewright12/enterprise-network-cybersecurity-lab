@@ -1,0 +1,46 @@
+options {
+    directory "/var/cache/bind";
+
+    // Listen only on the DNS server's internal address.
+    listen-on {
+        192.168.40.53;
+    };
+
+    listen-on-v6 {
+        none;
+    };
+
+    // Enable recursive queries for internal clients.
+    recursion yes;
+
+    // Internal networks allowed to use recursive DNS.
+    allow-recursion {
+        192.168.10.0/24;
+        192.168.20.0/24;
+        192.168.30.0/24;
+        192.168.40.0/24;
+    };
+
+    // Networks allowed to send DNS queries.
+    allow-query {
+        192.168.10.0/24;
+        192.168.20.0/24;
+        192.168.30.0/24;
+        192.168.40.0/24;
+    };
+
+    // External DNS resolvers.
+    forwarders {
+        1.1.1.1;
+        8.8.8.8;
+    };
+
+    // Use DNS forwarders before attempting iterative resolution.
+    forward only;
+
+    // DNSSEC validation.
+    dnssec-validation auto;
+
+    // Hide version information.
+    version "not disclosed";
+};

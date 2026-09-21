@@ -1,0 +1,26 @@
+;
+; Reverse DNS zone for 192.168.40.0/24
+;
+
+$TTL 86400
+
+@   IN  SOA dns-srv-01.lab.local. admin.lab.local. (
+        2026092101 ; Serial
+        3600       ; Refresh
+        900        ; Retry
+        604800     ; Expire
+        86400      ; Negative Cache TTL
+)
+
+; Authoritative name server
+@   IN  NS  dns-srv-01.lab.local.
+
+; Reverse records
+
+1   IN  PTR gateway.lab.local.
+10  IN  PTR win-srv-01.lab.local.
+20  IN  PTR linux-srv-01.lab.local.
+30  IN  PTR monitor-01.lab.local.
+40  IN  PTR nas.lab.local.
+50  IN  PTR git.lab.local.
+53  IN  PTR dns-srv-01.lab.local.
