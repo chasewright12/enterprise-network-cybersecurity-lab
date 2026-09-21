@@ -7,7 +7,7 @@
 
 <div align="center">
 
-<img src="../enterprise-network-cybersecurity-lab/docs/topology.jpg" width="400" alt="Enterprise network topology diagram. INTERNET connects to an ONT/ONU, then a PA-440 Palo Alto firewall, then by 10GbE to an Aruba CX 6100 switch. The switch connects to a PC on VLAN 10, a NAS on VLAN 30, Proxmox and an access point through trunk links, and a MikroTik LAB network. Proxmox connects to VLAN 30 SERVERS containing Wazuh and Grafana, and VLAN 50 LAB containing Kali, Windows, and Security Onion. The wider environment is a structured enterprise-inspired cybersecurity laboratory focused on segmentation and security monitoring.">
+<img src="docs/topology.jpg" width="400" alt="Enterprise network topology diagram. INTERNET connects to an ONT/ONU, then a PA-440 Palo Alto firewall, then by 10GbE to an Aruba CX 6100 switch. The switch connects to a PC on VLAN 10, a NAS on VLAN 30, Proxmox and an access point through trunk links, and a MikroTik LAB network. Proxmox connects to VLAN 30 SERVERS containing Wazuh and Grafana, and VLAN 50 LAB containing Kali, Windows, and Security Onion. The wider environment is a structured enterprise-inspired cybersecurity laboratory focused on segmentation and security monitoring.">
 
 </div>
 
